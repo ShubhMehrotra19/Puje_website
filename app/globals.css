@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'beaufort';
+    src: url('/fonts/BeaufortforLOL-Bold') format('ttf'),
+         url('/fonts/BeaufortforLOL-BoldItalic') format('ttf'),
+         url('/fonts/BeaufortforLOL-Heavy') format('ttf'),
+         url('/fonts/BeaufortforLOL-HeavyItalic') format('ttf'),
+         url('/fonts/BeaufortforLOL-Italic') format('ttf'),
+         url('/fonts/BeaufortforLOL-Light') format('ttf'),
+         url('/fonts/BeaufortforLOL-LightItalic') format('ttf'),
+         url('/fonts/BeaufortforLOL-Medium') format('ttf'),
+         url('/fonts/BeaufortforLOL-MediumItalic') format('ttf'),
+         url('/fonts/BeaufortforLOL-Regular') format('ttf');
+
+    font-weight: normal;
+    font-style: normal;
+  }
