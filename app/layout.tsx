@@ -9,6 +9,7 @@ const montserrat = Montserrat({
   style: "normal",
 });
 
+
 export const metadata: Metadata = {
   title: "Puje Website",
   description: "Real estate website",

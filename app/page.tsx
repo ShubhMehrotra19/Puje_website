@@ -18,4 +18,5 @@ export default function Home() {
       <div style={{ fontFamily: "beaufort" }}>This is Beaufort</div>
     </div>
   );
-}
+
+export default Page
