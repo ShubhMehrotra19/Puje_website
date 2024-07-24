@@ -25,7 +25,7 @@ const Flagship = () => {
             className="mx-auto"
           />
           <p>
-            Puje Ananta is the crown jewel of The Puje Group's legacy. This G+
+            Puje Ananta is the crown jewel of The Puje Group&apos;s legacy. This G+
             31 storey architectural masterpiece embodies our unwavering
             commitment to innovation, quality, and crafting homes that
             illuminate lives. With palatial homes, exclusive garden-facing
