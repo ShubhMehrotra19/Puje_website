@@ -1,0 +1,52 @@
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
+import { gsap } from "gsap";
+
+interface Props {}
+
+function VideoScreen(props: Props) {
+  const [show, setShow] = useState(false);
+
+  const {} = props;
+  useEffect(() => {
+    setTimeout(() => {
+      setShow(true);
+      gsap.fromTo(
+        ".animated-logo",
+        { opacity: 0 },
+        { opacity: 1, duration: 2, delay: 0.5, ease: "power2.out" }
+      );
+      gsap.fromTo(
+        ".dark-overlay",
+        { opacity: 0 },
+        { opacity: 0.5, duration: 2 }
+      );
+    }, 2000);
+  }, []);
+
+  return (
+    <div className="relative w-screen h-screen overflow-hidden">
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src="/videos/introVideo.mp4"
+        loop
+        autoPlay
+        muted
+      />
+      {show && (
+        <div className="absolute top-0 left-0 w-full h-full bg-black dark-overlay pointer-events-none opacity-20"></div>
+      )}
+      {show && (
+        <Image
+          className="absolute inset-0 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 animated-logo"
+          src="/images/pujeVideoLogo.png"
+          height={140}
+          width={400}
+          alt="PUJE Video Logo"
+        />
+      )}
+    </div>
+  );
+}
+
+export default VideoScreen;
