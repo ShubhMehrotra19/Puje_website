@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react'
 import MainPage from '../MainPage/mainPage'
 import VideoScreen from '../videoScreen/videoScreen'
+import gsap from 'gsap'
 
 interface Props {}
 
@@ -12,7 +13,7 @@ const [show, setShow] = React.useState(false)
 useEffect(() => {
   setTimeout(() => {
     setShow(true)
-  }, 5000)
+  }, 4000)
 },[show])
   return (
     <>
