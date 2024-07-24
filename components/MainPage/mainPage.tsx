@@ -1,3 +1,4 @@
+"luse client"
 import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 
@@ -32,8 +33,7 @@ function MainPage(props: Props) {
                     src='/images/mainImage.png' 
                     height={100} 
                     width={width} 
-                    alt='Main' 
-                    layout='responsive'
+                    alt=''
                 />
                 <div className='absolute top-0 left-40 inset-0 flex flex-col justify-center items-center w-fit'>
                     <Image src='/images/logo_puje.png' height={240} width={160} alt='Logo' />
