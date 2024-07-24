@@ -11,12 +11,11 @@ const GetInTouch = dynamic(() => import("@/components/contact/GetInTouch"), {
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-20">
-      <div style={{ height: "400px", width: "100%" }}>
+    <div>
+      <div className="w-full">
         <GetInTouch posix={[19.026353, 72.851802]} />
       </div>
       <div style={{ fontFamily: "beaufort" }}>This is Beaufort</div>
     </div>
   );
-
-export default Page
+}
