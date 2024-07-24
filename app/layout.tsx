@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" style={{scrollbarWidth: "none", userSelect: "none"}}>
       <body className={montserrat.className}>{children}</body>
     </html>
   );
