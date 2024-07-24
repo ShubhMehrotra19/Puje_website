@@ -7,6 +7,7 @@ function Page(props: Props) {
   const {} = props
 
   return (
+
     <>
     <DisplayComponent />
     </>
@@ -14,3 +15,4 @@ function Page(props: Props) {
 }
 
 export default Page
+
