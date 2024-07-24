@@ -7,7 +7,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
 import MainPage from "@/components/MainPage/mainPage";
 
-const GetInTouch = dynamic(() => import("@/components/contact/GetInTouch"), {
+const GetInTouch = dynamic(() => import("@/components/Contact/GetInTouch"), {
   loading: () => <p>A map is loading</p>,
   ssr: false,
 });
@@ -32,11 +32,11 @@ export default function Home() {
     <>
       <MainPage />
       <div>
-      <div className="w-full">
-        <GetInTouch posix={[19.026353, 72.851802]} />
+        <div className="w-full">
+          <GetInTouch posix={[19.026353, 72.851802]} />
+        </div>
+        <div style={{ fontFamily: "beaufort" }}>This is Beaufort</div>
       </div>
-      <div style={{ fontFamily: "beaufort" }}>This is Beaufort</div>
-    </div>
     </>
   );
 }

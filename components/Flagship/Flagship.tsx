@@ -1,5 +1,5 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 const Flagship = () => {
   return (
@@ -24,13 +24,13 @@ const Flagship = () => {
             className="mx-auto"
           />
           <p>
-            Puje Ananta is the crown jewel of The Puje Group's legacy. This G+ 31
-            storey architectural masterpiece embodies our unwavering commitment to
-            innovation, quality, and crafting homes that illuminate lives. With
-            palatial homes, exclusive garden-facing views, timeless Neoclassical
-            design and an unparalleled lifestyle promising connectivity,
-            tranquillity and exclusivity, Ananta truly is the Landmark sculpted for
-            those who have made their Marks.
+            Puje Ananta is the crown jewel of The Puje Group's legacy. This G+
+            31 storey architectural masterpiece embodies our unwavering
+            commitment to innovation, quality, and crafting homes that
+            illuminate lives. With palatial homes, exclusive garden-facing
+            views, timeless Neoclassical design and an unparalleled lifestyle
+            promising connectivity, tranquillity and exclusivity, Ananta truly
+            is the Landmark sculpted for those who have made their Marks.
           </p>
           <button className="bg-black text-white px-4 py-2 rounded-md w-1/4 mx-auto">
             Know More
