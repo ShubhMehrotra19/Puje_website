@@ -1,11 +1,18 @@
-import Flagship from "@/components/example/Flagship/Flagship";
-import Footer from "@/components/example/Footer/Footer";
 
-export default function Home() {
+import React from 'react'
+import DisplayComponent from '@/components/DisplayComponent/DisplayComponent'
+
+interface Props {}
+
+function Page(props: Props) {
+  const {} = props
   return (
+
     <>
-      <Flagship/>
-     
+    <DisplayComponent />
     </>
-  );
+  )
 }
+
+export default Page
+
