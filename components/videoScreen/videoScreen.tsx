@@ -14,14 +14,14 @@ function VideoScreen(props: Props) {
       gsap.fromTo(
         ".animated-logo",
         { opacity: 0 },
-        { opacity: 1, duration: 2, delay: 0.5, ease: "power2.out" }
+        { opacity: 1, duration: 2, delay: 0.75, ease: "power4.inOut" }
       );
       gsap.fromTo(
         ".dark-overlay",
         { opacity: 0 },
-        { opacity: 0.5, duration: 2 }
+        { opacity: 0.5, duration: 1 }
       );
-    }, 2000);
+    }, 1000);
   }, []);
 
   return (
@@ -42,7 +42,7 @@ function VideoScreen(props: Props) {
           src="/images/pujeVideoLogo.png"
           height={140}
           width={400}
-          alt="PUJE Video Logo"
+          alt=''
         />
       )}
     </div>
