@@ -6,6 +6,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
 import Footer from "@/components/Footer/Footer";
+import DesignPhilosophy from "@/components/DesignPhilosophy/DesignPhilosophy";
 
 const GetInTouch = dynamic(() => import("@/components/contact/GetInTouch"), {
   loading: () => <p>A map is loading</p>,
@@ -30,10 +31,11 @@ export default function Home() {
   }, []);
   return (
     <>
-        <div className="w-full">
-          <GetInTouch posix={[19.026353, 72.851802]} />
-        </div>
-        <Footer />
+      <DesignPhilosophy />
+      <div className="w-full">
+        <GetInTouch posix={[19.026353, 72.851802]} />
+      </div>
+      <Footer />
     </>
   );
 }
