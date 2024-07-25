@@ -16,7 +16,7 @@ const Flagship = () => {
             width={369}
           />
         </div>
-        <div className="flex-1 flex flex-col justify-evenly gap-3 pl-8">
+        <div className="flex-1 flex flex-col justify-evenly mr-36">
           <Image
             src="/images/flagship_logo-1.svg"
             alt="Flagship logo"
@@ -24,7 +24,7 @@ const Flagship = () => {
             width={200}
             className="mx-auto"
           />
-          <p>
+          <p className="tracking-wider leading-5">
             Puje Ananta is the crown jewel of The Puje Groups legacy. This G+
             31 storey architectural masterpiece embodies our unwavering
             commitment to innovation, quality, and crafting homes that
@@ -33,9 +33,10 @@ const Flagship = () => {
             promising connectivity, tranquillity and exclusivity, Ananta truly
             is the Landmark sculpted for those who have made their Marks.
           </p>
-          <button className="bg-black text-white px-4 py-2 rounded-md w-1/4 mx-auto">
+           <button className="bg-black text-white px-6 py-2 rounded-sm w-fit mx-auto">
             Know More
           </button>
+  
         </div>
       </div>
     </div>
