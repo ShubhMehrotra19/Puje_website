@@ -13,126 +13,70 @@ const DesignPhilosophy = () => {
             <hr className="border-t-[1px] border-[#D7B56D]" />
           </div>
           <div className="flex flex-col gap-8 justify-start">
-            <div className="flex gap-2">
-              <div>
-                <Image
-                  src={"/images/cutting-edge.png"}
-                  alt="Cutting Edge"
-                  height={38}
-                  width={37}
-                />
+            {[
+              {
+                src: "/images/cutting-edge.png",
+                alt: "Cutting Edge",
+                title: "Cutting-Edge 3D BIM Models",
+                desc: "Employed from initial design stages for precision and efficiency.",
+              },
+              {
+                src: "/images/smart-plans.png",
+                alt: "Smart Plans",
+                title: "Smart Plans",
+                desc: "Optimising spaces for enhanced utility and long-term value.",
+              },
+              {
+                src: "/images/dsgn-meets-func.png",
+                alt: "Design Meets Functionality",
+                title: "Design Meets Functionality",
+                desc: "Balancing aesthetic appeal with practical functionality.",
+              },
+              {
+                src: "/images/asttc-dsgn-facades.png",
+                alt: "Aesthetically Designed Facades",
+                title: "Aesthetically Designed Facades",
+                desc: "Enhancing the urban landscape with striking architectural statements.",
+              },
+              {
+                src: "/images/fut-rdy-tech.png",
+                alt: "Future-Ready Technology",
+                title: "Future-Ready Technology",
+                desc: "Integrating tech-driven solutions for sustainable and efficient living.",
+              },
+              {
+                src: "/images/ren-resource.png",
+                alt: "Renewable Resources",
+                title: "Renewable Resources",
+                desc: "Commitment to green building practices for a healthier environment.",
+              },
+            ].map((item, index) => (
+              <div key={index} className="flex gap-2">
+                <div className="relative w-10 h-10">
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div className="flex flex-col justify-center">
+                  <p className="text-[#D7B56D] font-semibold">{item.title}</p>
+                  <p>{item.desc}</p>
+                </div>
               </div>
-              <div className="flex flex-col justify-center">
-                <p className="text-[#D7B56D] font-semibold">
-                  Cutting-Edge 3D BIM Models
-                </p>
-                <p>
-                  Employed from initial design stages for precision and
-                  efficiency.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-2 ">
-              <div>
-                <Image
-                  src={"/images/smart-plans.png"}
-                  alt="Cutting Edge"
-                  height={38}
-                  width={37}
-                />
-              </div>
-              <div className="flex flex-col justify-center">
-                <p className="text-[#D7B56D] font-semibold">Smart Plans</p>
-                <p>
-                  Optimising spaces for enhanced utility and long-term value.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-2">
-              <div>
-                <Image
-                  src={"/images/dsgn-meets-func.png"}
-                  alt="Cutting Edge"
-                  height={38}
-                  width={37}
-                />
-              </div>
-              <div className="flex flex-col justify-center">
-                <p className="text-[#D7B56D] font-semibold">
-                  Design Meets Functionality
-                </p>
-                <p>Balancing aesthetic appeal with practical functionality.</p>
-              </div>
-            </div>
-            <div className="flex gap-2">
-              <div>
-                <Image
-                  src={"/images/asttc-dsgn-facades.png"}
-                  alt="Cutting Edge"
-                  height={38}
-                  width={37}
-                />
-              </div>
-              <div className="flex flex-col justify-center">
-                <p className="text-[#D7B56D] font-semibold">
-                  Aesthetically Designed Facades
-                </p>
-                <p>
-                  Enhancing the urban landscape with striking architectural
-                  statements.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-2">
-              <div>
-                <Image
-                  src={"/images/fut-rdy-tech.png"}
-                  alt="Cutting Edge"
-                  height={38}
-                  width={37}
-                />
-              </div>
-              <div className="flex flex-col justify-center">
-                <p className="text-[#D7B56D] font-semibold">
-                  Future-Ready Technology
-                </p>
-                <p>
-                  Integrating tech-driven solutions for sustainable and
-                  efficient living.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-2 justify-center">
-              <div>
-                <Image
-                  src={"/images/ren-resource.png"}
-                  alt="Cutting Edge"
-                  height={38}
-                  width={37}
-                />
-              </div>
-              <div className="flex flex-col">
-                <p className="text-[#D7B56D] font-semibold">
-                  Renewable Resources
-                </p>
-                <p>
-                  Commitment to green building practices for a healthier
-                  environment.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-        <div className="">
+        <div className="relative w-1/3 aspect-square">
           <Image
-            src={"/images/dsgn_phil.png"}
+            src="/images/dsgn_phil.png"
             alt="Design Philosophy"
-            height={500}
-            width={500}
+            fill
+            className="object-contain"
           />
         </div>
       </div>
-
       <div>
         <button className="bg-black p-3 rounded-sm text-white font-[beaufort] mt-3">
           <p>Know More</p>
