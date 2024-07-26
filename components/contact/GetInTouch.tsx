@@ -41,7 +41,7 @@ const GetInTouch = ({ posix, zoom = defaults.zoom }: MapProps) => {
         </MapContainer>
       </div>
       <div className="flex flex-col justify-center items-center w-1/2 gap-5 px-20">
-        <div className="text-[#D7B56D] text-3xl font-[beaufort]">
+        <div className="text-[#D7B56D] text-5xl font-[beaufort]">
           <p>Get in Touch</p>
         </div>
         <div className="w-full text-center">
