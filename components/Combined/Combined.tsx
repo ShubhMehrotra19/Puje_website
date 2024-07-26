@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Combined = () => {
   return (
-    <div className="w-full mb-24">
+    <div className="w-full mb-32 -mt-4">
       <div className="px-24">
         <div className="flex justify-evenly">
           <div className="flex flex-col gap-5 w-1/2 justify-center pr-10">
