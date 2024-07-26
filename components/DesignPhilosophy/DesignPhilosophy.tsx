@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const DesignPhilosophy = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-10 mb-24">
+    <div className="flex flex-col justify-center items-center gap-10 mb-32">
       <div className="flex w-full p-10 bg-white justify-evenly">
         <div className="flex flex-col justify-center gap-5">
           <div className="flex flex-col gap-5 pl-12">
@@ -78,7 +78,7 @@ const DesignPhilosophy = () => {
         </div>
       </div>
       <div>
-        <button className="bg-black p-3 rounded-sm text-white font-[beaufort] mt-3">
+        <button className="bg-black p-3 rounded-sm text-white font-[beaufort] mt-3 hover:cursor-pointer hover:scale-[102%] hover:bg-black/90 active:scale-95 transition-all duration-300">
           <p>Know More</p>
         </button>
       </div>
