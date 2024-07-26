@@ -9,6 +9,7 @@ import Footer from "@/components/Footer/Footer";
 import DesignPhilosophy from "@/components/DesignPhilosophy/DesignPhilosophy";
 import CombinedProjects from "@/components/CombinedProjects/CombinedProjects"
 import Combined from "@/components/Combined/Combined";
+import Decoding from "@/components/Decoding/Decoding";
 
 
 const GetInTouch = dynamic(() => import("@/components/contact/GetInTouch"), {
@@ -36,6 +37,7 @@ export default function Home() {
     <>
 
          <Combined />
+         <Decoding/>
         <DesignPhilosophy />
        <CombinedProjects/>
         <div className="w-full">
