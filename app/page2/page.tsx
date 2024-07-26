@@ -7,9 +7,9 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
 import Footer from "@/components/Footer/Footer";
 import DesignPhilosophy from "@/components/DesignPhilosophy/DesignPhilosophy";
-import Flagship from "@/components/Flagship/Flagship";
-import Ongoing from "@/components/Ongoing/Ongoing";
+import CombinedProjects from "@/components/CombinedProjects/CombinedProjects"
 import Combined from "@/components/Combined/Combined";
+
 
 const GetInTouch = dynamic(() => import("@/components/contact/GetInTouch"), {
   loading: () => <p>A map is loading</p>,
@@ -34,14 +34,15 @@ export default function Home() {
   }, []);
   return (
     <>
-      <Combined />
-      <DesignPhilosophy />
-      <Flagship />
-      <Ongoing />
-      <div className="w-full">
-        <GetInTouch posix={[19.026353, 72.851802]} />
-      </div>
-      <Footer />
+
+         <Combined />
+        <DesignPhilosophy />
+       <CombinedProjects/>
+        <div className="w-full">
+          <GetInTouch posix={[19.026353, 72.851802]} />
+        </div>
+        <Footer />
+
     </>
   );
 }
