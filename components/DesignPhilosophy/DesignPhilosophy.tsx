@@ -6,11 +6,11 @@ const DesignPhilosophy = () => {
     <div className="flex flex-col justify-center items-center gap-10 mb-24">
       <div className="flex w-full p-10 bg-white justify-evenly">
         <div className="flex flex-col justify-center gap-5">
-          <div className="flex flex-col gap-2 pl-12">
+          <div className="flex flex-col gap-5 pl-12">
             <p className="font-[beaufort] text-5xl text-[#D7B56D]">
               Design Philosophy
             </p>
-            <hr className="bg-[#D7B56D] text-[#D7B56D]" />
+            <hr className="border-t-[1px] border-[#D7B56D]" />
           </div>
           <div className="flex flex-col gap-8 justify-start">
             <div className="flex gap-2">
