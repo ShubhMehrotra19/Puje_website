@@ -11,7 +11,6 @@ import CombinedProjects from "@/components/CombinedProjects/CombinedProjects";
 import Combined from "@/components/Combined/Combined";
 import Decoding from "@/components/Decoding/Decoding";
 
-
 const GetInTouch = dynamic(() => import("@/components/contact/GetInTouch"), {
   loading: () => <p>A map is loading</p>,
   ssr: false,
@@ -34,15 +33,15 @@ export default function Home() {
     gsap.ticker.lagSmoothing(0);
   }, []);
   return (
-    <>
-         <Combined />
-         <Decoding/>
-        <DesignPhilosophy />
-       <CombinedProjects/>
-        <div className="w-full">
-          <GetInTouch posix={[19.026353, 72.851802]} />
-        </div>
-        <Footer />
-    </>
+    <div className="w-screen max-h-min">
+      <Combined />
+      <Decoding />
+      <DesignPhilosophy />
+      <CombinedProjects />
+      <div className="w-full">
+        <GetInTouch posix={[19.026353, 72.851802]} />
+      </div>
+      <Footer />
+    </div>
   );
 }
