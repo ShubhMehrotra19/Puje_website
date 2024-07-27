@@ -58,7 +58,7 @@ const CombinedProjects = () => {
           Ongoing Projects
         </h1>
         <div className="flex justify-around relative">
-          <div className="absolute left-0 top-0  ">
+          <div className="absolute left-0 top-0  hidden md:block">
             <Image
               src="/images/OG_PRO_BG2.png"
               alt="logo"

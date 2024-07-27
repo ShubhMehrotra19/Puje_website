@@ -34,15 +34,15 @@ export default function Home() {
     gsap.ticker.lagSmoothing(0);
   }, []);
   return (
-    <>
-         <Combined />
-         <Decoding/>
-        <DesignPhilosophy />
-       <CombinedProjects/>
-        <div className="w-full">
-          <GetInTouch posix={[19.026353, 72.851802]} />
-        </div>
-        <Footer />
-    </>
+    <div className="w-screen max-h-min">
+      <Combined />
+      <Decoding />
+      <DesignPhilosophy />
+      <CombinedProjects />
+      <div className="w-full">
+        <GetInTouch posix={[19.026353, 72.851802]} />
+      </div>
+      <Footer />
+    </div>
   );
 }
