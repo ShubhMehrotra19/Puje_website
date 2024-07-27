@@ -73,7 +73,7 @@ const GetInTouch = ({ posix, zoom = defaults.zoom }: MapProps) => {
           />
         </div>
         <div>
-          <button className="bg-black px-2 py-5 rounded-sm text-white font-[beaufort]">
+          <button className="bg-black py-3 px-5 rounded-sm text-white font-[beaufort] hover:bg-black/90 hover:scale-[102%] transition-all duration-300">
             <p>Send Message</p>
           </button>
         </div>
