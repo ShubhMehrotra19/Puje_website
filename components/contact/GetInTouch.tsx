@@ -25,8 +25,8 @@ const GetInTouch = ({ posix, zoom = defaults.zoom }: MapProps) => {
   if (!isMounted) return null;
 
   return (
-    <div className="flex p-10 bg-[#EBE9E6] w-full">
-      <div className="w-1/2">
+    <div className="flex p-10 bg-[#EBE9E6] w-full z-0">
+      <div className="w-1/2 z-0">
         <MapContainer
           center={posix}
           zoom={zoom}

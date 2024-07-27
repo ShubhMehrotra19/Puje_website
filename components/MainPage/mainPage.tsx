@@ -46,7 +46,7 @@ function MainPage(props: Props) {
     gsap.fromTo(
       ".mainPage",
       { opacity: 0 },
-      { opacity: 1, duration: 2, delay: 0.75, ease: "power4.inOut" }
+      { opacity: 1, duration: 0.75, ease: "power4.inOut" }
     );
   }, []);
 
@@ -76,6 +76,12 @@ function MainPage(props: Props) {
       duration: 1,
     });
   }, []);
+
+  useEffect(() => {
+    if(animationComplete){
+      gsap.fromTo("#pujeLogo", {opacity: 0, scale: 0}, {opacity: 1, scale: 1, duration: 1, ease: "power4.inOut"});
+    }
+  },[animationComplete]);
 
   return (
     <>
@@ -182,7 +188,7 @@ function Navbar({ animationComplete }: NavbarProps) {
             </>
           )}
           {animationComplete && (
-            <Image src={'/images/logoPuje.png'} height={50} width={20} alt="Logo" />
+            <Image id="logoPuje" src={'/images/logoPuje.png'} height={50} width={20} alt="Logo" />
           )}
         </div>
         <button className='rounded-sm bg-[#D7B56D] text-white font-["beaufort"] text-center w-fit px-5 py-3 hover:bg-[#d5b266] hover:scale-[102%] transition-all duration-300 active:scale-95'>
