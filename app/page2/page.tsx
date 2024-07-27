@@ -11,6 +11,7 @@ import CombinedProjects from "@/components/CombinedProjects/CombinedProjects";
 import Combined from "@/components/Combined/Combined";
 import Decoding from "@/components/Decoding/Decoding";
 
+
 const GetInTouch = dynamic(() => import("@/components/contact/GetInTouch"), {
   loading: () => <p>A map is loading</p>,
   ssr: false,
