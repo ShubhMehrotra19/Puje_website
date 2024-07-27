@@ -34,7 +34,7 @@ export default function Home() {
     gsap.ticker.lagSmoothing(0);
   }, []);
   return (
-    <div className="z-0 pt-[200px]">
+    <div className="z-0 pt-[200px] w-screen">
          <Combined />
          <Decoding/>
         <DesignPhilosophy />
