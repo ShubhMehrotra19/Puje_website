@@ -90,6 +90,13 @@ function MainPage(props: Props) {
         { opacity: 0 },
         { opacity: 1, duration: 1.2, ease: "power4.inOut" }
       );
+      gsap.fromTo('.navbar', {height: '150px'}, {height: '100px', duration: 1, ease: 'power4.inOut'})
+    }
+  }, [animationComplete]);
+
+  useEffect(() => {
+    if (animationComplete) {
+      window.scrollTo(0, 0);
     }
   }, [animationComplete]);
 
@@ -97,7 +104,7 @@ function MainPage(props: Props) {
     <>
       <Navbar animationComplete={animationComplete} />
       {!animationComplete ? (
-        <div className="mainPage flex flex-col items-center justify-center max-h-full overflow-hidden pt-[150px] mb-20">
+        <div className="mainPage flex flex-col items-center shadow-md justify-center max-h-full overflow-hidden pt-[150px] mb-20">
           <div className="image w-full h-[650px] relative">
             <Image
               className="relative"
@@ -146,20 +153,20 @@ interface NavbarProps {
 function Navbar({ animationComplete }: NavbarProps) {
   return (
     <div
-      className={`navbar z-20 w-full shadow-sm fixed top-0 left-0 right-0 bg-white transition-height duration-300 ${
+      className={`navbar z-20 w-full shadow-md fixed top-0 left-0 right-0 bg-white transition-height duration-300 ${
         animationComplete ? "h-[100px]" : "h-[150px]"
       }`}
     >
-      <div className="max-w-[85rem] mx-auto flex justify-between items-center h-full w-full">
-        <div className="p-3">
-          <Image
-            className="hover:cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300"
+      <div className={`max-w-[85rem] mx-auto flex items-center h-full w-full ${animationComplete ? `justify-between` : `justify-center`}`}>
+          {animationComplete && (
+            <Image
+            className="hover:cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 mr-8"
             src="/images/menu.png"
             height={40}
             width={25}
             alt=""
           />
-        </div>
+          )}
         <div className="flex flex-col justify-center gap-2">
           {!animationComplete && (
             <>
@@ -212,9 +219,11 @@ function Navbar({ animationComplete }: NavbarProps) {
             />
           )}
         </div>
-        <button className='rounded-sm bg-[#D7B56D] text-white font-["beaufort"] text-center w-fit px-5 py-3 hover:bg-[#d5b266] hover:scale-[102%] transition-all duration-300 active:scale-95'>
+        {animationComplete && (
+          <button className='rounded-sm bg-[#D7B56D] text-white font-["beaufort"] text-center w-fit px-5 py-3 hover:bg-[#d5b266] hover:scale-[102%] transition-all duration-300 active:scale-95'>
           Contact Us
         </button>
+        )}
       </div>
     </div>
   );
