@@ -3,8 +3,25 @@ import Image from "next/image";
 
 const Combined = () => {
   return (
-    <div className="w-full mb-24">
-      <div className="px-24">
+    <div className="w-full mb-24 relative">
+      <div className="absolute left-0 bottom-0">
+        <Image
+          src="/images/OG_PRO_BG2.png"
+          alt="logo"
+          height={200}
+          width={100}
+        />
+      </div>
+      <div className="absolute right-0 top-96">
+        <Image
+          src="/images/Flag_PRO_BG.png"
+          alt="logo"
+          width={100}
+          height={200}
+          objectFit="contain"
+        />
+      </div>
+      <div className="px-24 mb-24">
         <div className="flex justify-evenly">
           <div className="flex flex-col gap-5 w-1/2 justify-center pr-10">
             <div className="">
@@ -37,6 +54,99 @@ const Combined = () => {
                 style={{ objectFit: "cover" }}
               />
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#D0B06B] flex justify-evenly bg-opacity-5 mb-24">
+        <div className="flex gap-10 p-10">
+          <div className="flex flex-col border-r-[1px] border-[#D7B56D] pr-10 items-center gap-4">
+            <p className="text-5xl font-[beaufort] text-[#D7B56D]">35+</p>
+            <p className="max-w-[15ch] text-center">
+              Year of real estate experience{" "}
+            </p>
+          </div>
+          <div className="flex flex-col border-r-[1px] border-[#D7B56D] pr-10 items-center gap-4">
+            <p className="text-5xl font-[beaufort] text-[#D7B56D]">50+</p>
+            <p className="text-center max-w-[10ch]">Projects Completed</p>
+          </div>
+          <div className="flex flex-col border-r-[1px] border-[#D7B56D] pr-10 items-center gap-4">
+            <p className="text-5xl font-[beaufort] text-[#D7B56D]">10K+</p>
+            <p className="text-center max-w-[10ch]">Happy Families </p>
+          </div>
+          <div className="flex flex-col border-r-[1px] border-[#D7B56D] pr-10 items-center gap-4">
+            <p className="text-5xl font-[beaufort] text-[#D7B56D]">5M+ Sq.Ft</p>
+            <p className="text-center max-w-[10ch]">Constructed Area </p>
+          </div>
+          <div className="flex flex-col items-center gap-4">
+            <p className="text-5xl font-[beaufort] text-[#D7B56D]">2M+ Sq.Ft</p>
+            <p className="text-center max-w-[10ch]">
+              Redevelopment Properties{" "}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="flex justify-evenly px-24 mb-24">
+        <div className="flex flex-col items-center mt-12 gap-10">
+          <div className="flex justify-center items-center gap-4">
+            <div>
+              <Image
+                src={"/images/vision.png"}
+                alt="Vision"
+                height={50}
+                width={132}
+              />
+            </div>
+            <p className="text-5xl font-[beaufort] text-[#D7B56D]">Vision</p>
+          </div>
+          <p className="max-w-[40ch]">
+            To illuminate the lives of every individual we touch through ethical
+            real estate endeavors, thoughtful educational initiatives, and
+            people-first hospitality services.
+          </p>
+        </div>
+        <hr className="border-r-[1px] h-24 border-[#D7B56D] flex flex-col flex-end mt-32" />
+        <div className="flex flex-col items-center gap-10">
+          <div className="flex justify-center items-center gap-4">
+            <div>
+              <Image
+                src={"/images/mission.png"}
+                alt="Mission"
+                height={50}
+                width={40}
+              />
+            </div>
+            <p className="text-5xl font-[beaufort] text-[#D7B56D]">Mission</p>
+          </div>
+          <p className="max-w-[40ch]">
+            To build future-ready assets across real estate, education, and
+            hospitality domains, driven by our core values.
+          </p>
+        </div>
+      </div>
+      <div className="bg-[#D0B06B] flex flex-col items-center bg-opacity-5 p-5">
+        <div className="flex gap-5">
+          <Image
+            src={"/images/vision1.png"}
+            alt="Vision"
+            height={115}
+            width={70}
+          />
+          <p className="font-[beaufort] text-[#D0B06B] text-5xl">Values</p>
+        </div>
+        <div className="flex gap-16 p-10">
+          <div className="flex flex-col border-r-[1px] border-[#D7B56D] pr-16 items-center gap-4">
+            <p className="max-w-[10ch] text-center">People-First Design </p>
+          </div>
+          <div className="flex flex-col border-r-[1px] border-[#D7B56D] pr-16 items-center gap-4">
+            <p className="text-center max-w-[15ch]">
+              Customer - Centric Approach
+            </p>
+          </div>
+          <div className="flex flex-col border-r-[1px] border-[#D7B56D] pr-16 items-center gap-4">
+            <p className="text-center max-w-[10ch]">Adhering to Commitments </p>
+          </div>
+          <div className="flex flex-col pr-16 items-center gap-4">
+            <p className="text-center max-w-[10ch]">Delivering Beyond </p>
           </div>
         </div>
       </div>

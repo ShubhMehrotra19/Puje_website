@@ -30,10 +30,10 @@ export default function ListedPage() {
   }, []);
   return (
     <>
-        <div className="w-full">
-          <GetInTouch posix={[19.026353, 72.851802]} />
-        </div>
-        <Footer />
+      <div className="w-full z-0">
+        <GetInTouch posix={[19.026353, 72.851802]} />
+      </div>
+      <Footer />
     </>
   );
 }
