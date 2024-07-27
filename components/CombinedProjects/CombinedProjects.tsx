@@ -5,7 +5,7 @@ const CombinedProjects = () => {
   return (
     <>
       <div className="flex flex-col md:gap-10 mb-32">
-        <h1 className="w-[80%] mx-auto pb-5 text-4xl text-[#D7B56D] text-center font-semibold md:mb-12 md:border-b-2 md:border-[#212121]/40">
+        <h1 className="w-[80%] mx-auto pb-5 text-5xl text-[#D7B56D] text-center md:mb-12 md:border-b-2 md:border-[#212121]/40 font-[beaufort]">
           Flagship Project
         </h1>
         <div className="flex justify-between  items-center">
@@ -61,7 +61,7 @@ const CombinedProjects = () => {
       </div>
 
       <div className="flex flex-col gap-10 mb-24">
-        <h1 className="w-[80%] mx-auto pb-5 text-4xl text-[#D7B56D] text-center font-semibold mb-12 md:border-b-2 md:border-[#212121]/40">
+        <h1 className="w-[80%] mx-auto pb-5 text-5xl text-[#D7B56D] text-center font-[beaufort] mb-12 md:border-b-2 md:border-[#212121]/40">
           Ongoing Projects
         </h1>
         <div className="flex justify-around relative md:flex-row flex-col-reverse gap-3">
