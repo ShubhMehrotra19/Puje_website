@@ -25,13 +25,13 @@ const GetInTouch = ({ posix, zoom = defaults.zoom }: MapProps) => {
   if (!isMounted) return null;
 
   return (
-    <div className="flex p-10 bg-[#EBE9E6] w-full z-0">
-      <div className="w-1/2 z-0">
+    <div className="flex md:flex-row flex-col md:p-10 p-5 md:bg-[#EBE9E6] bg-transparent w-full z-0">
+      <div className="md:w-1/2 md:h-[500px] h-[400px] w-full z-0 md:mb-0 mb-12">
         <MapContainer
           center={posix}
           zoom={zoom}
           scrollWheelZoom={false}
-          style={{ height: "500px", width: "100%" }}
+          style={{ height: "100%", width: "100%" }}
         >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -40,39 +40,40 @@ const GetInTouch = ({ posix, zoom = defaults.zoom }: MapProps) => {
           <Marker position={posix} draggable={false}></Marker>
         </MapContainer>
       </div>
-      <div className="flex flex-col justify-center items-center w-1/2 gap-5 px-20">
+
+      <div className="flex flex-col justify-center items-center md:w-1/2 w-full gap-5 md:px-20 px-5">
         <div className="text-[#D7B56D] text-5xl font-[beaufort]">
           <p>Get in Touch</p>
         </div>
-        <div className="w-full text-center">
-          <p>
-            Puje Ananta, Plot Nos. 296 & 289, B.A.Khimji Road, <br />
-            Opp. Napoo Garden, Matunga East, Mumbai - 400019{" "}
-          </p>
+        <div className="w-full text-center md:block hidden">
+          Puje Ananta, Plot Nos. 296 & 289, B.A.Khimji Road, <br />
+          Opp. Napoo Garden, Matunga East,Mumbai-400019{" "}
         </div>
-        <div>
-          <p>E: info@pujegroup.com</p>
-        </div>
-        <div className="flex flex-col gap-5 w-full">
-          <input type="text" placeholder="Name*" className="h-fit rounded-sm pl-2 py-2" />
+        <p className="md:block hidden">E: info@pujegroup.com</p>
+        <div className="flex flex-col gap-5 w-full mb-3">
+          <input
+            type="text"
+            placeholder="Name*"
+            className="h-fit rounded-sm pl-2 py-2 border-2 border-black/50"
+          />
           <input
             type="text"
             placeholder="Email*"
-            className="h-fit rounded-sm pl-2 py-2"
+            className="h-fit rounded-sm pl-2 py-2 border-2 border-black/50"
           />
           <input
             type="text"
             placeholder="Phone No.*"
-            className="h-fit rounded-sm pl-2 py-2"
+            className="h-fit rounded-sm pl-2 py-2 border-2 border-black/50"
           />
           <input
             type="text"
             placeholder="Message*"
-            className="h-fit rounded-sm pl-2 py-8"
+            className="h-fit rounded-sm pl-2 py-8 border-2 border-black/50"
           />
         </div>
         <div>
-          <button className="bg-black p-3 rounded-sm text-white font-[beaufort] mt-3 ">
+          <button className="bg-black px-2 py-5 rounded-sm text-white font-[beaufort]">
             <p>Send Message</p>
           </button>
         </div>
