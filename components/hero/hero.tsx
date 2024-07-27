@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 interface Props {}
 
 function Hero(props: Props) {
-    const {} = props
+  const {} = props;
 
     return (
         <div className='md:h-[700px] h-[500px] w-full flex justify-center items-center'>
@@ -14,4 +14,4 @@ function Hero(props: Props) {
     )
 }
 
-export default Hero
+export default Hero;
