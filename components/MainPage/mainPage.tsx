@@ -5,6 +5,7 @@ import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
 import ListedPage from "../ListedPage/ListedPage";
+import Hero from "../Hero/Hero";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,7 +65,7 @@ function MainPage(props: Props) {
       duration: 2,
       transformOrigin: "center center",
     });
-  
+
     gsap.to(".letter, .group, .image", {
       scrollTrigger: {
         trigger: ".navbar",
@@ -78,16 +79,25 @@ function MainPage(props: Props) {
   }, []);
 
   useEffect(() => {
-    if(animationComplete){
-      gsap.fromTo("#pujeLogo", {opacity: 0, scale: 0}, {opacity: 1, scale: 1, duration: 1, ease: "power4.inOut"});
+    if (animationComplete) {
+      gsap.fromTo(
+        "#pujeLogo",
+        { opacity: 0, scale: 0 },
+        { opacity: 1, scale: 1, duration: 1, ease: "power4.inOut" }
+      );
+      gsap.fromTo(
+        "#hero",
+        { opacity: 0 },
+        { opacity: 1, duration: 1.2, ease: "power4.inOut" }
+      );
     }
-  },[animationComplete]);
+  }, [animationComplete]);
 
   return (
     <>
       <Navbar animationComplete={animationComplete} />
       {!animationComplete ? (
-        <div className="mainPage flex flex-col items-center justify-center max-h-full overflow-hidden pt-[150px] mb-20"> 
+        <div className="mainPage flex flex-col items-center justify-center max-h-full overflow-hidden pt-[150px] mb-20">
           <div className="image w-full h-[650px] relative">
             <Image
               className="relative"
@@ -118,7 +128,12 @@ function MainPage(props: Props) {
           </div>
         </div>
       ) : (
-        <ListedPage />
+        <>
+          <div id="hero" className="w-screen">
+            <Hero />
+          </div>
+          <ListedPage />
+        </>
       )}
     </>
   );
@@ -188,7 +203,13 @@ function Navbar({ animationComplete }: NavbarProps) {
             </>
           )}
           {animationComplete && (
-            <Image id="logoPuje" src={'/images/logoPuje.png'} height={50} width={20} alt="Logo" />
+            <Image
+              id="logoPuje"
+              src={"/images/logoPuje.png"}
+              height={50}
+              width={20}
+              alt="Logo"
+            />
           )}
         </div>
         <button className='rounded-sm bg-[#D7B56D] text-white font-["beaufort"] text-center w-fit px-5 py-3 hover:bg-[#d5b266] hover:scale-[102%] transition-all duration-300 active:scale-95'>

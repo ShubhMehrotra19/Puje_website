@@ -14,11 +14,11 @@ function VideoScreen(props: Props) {
       gsap.fromTo(
         "#animated-logo",
         { opacity: 0 },
-        { opacity: 1, duration: 2, delay: 0.75, ease: "power4.inOut" }
+        { opacity: 1, duration: 2.8, ease: "power4.inOut" }
       );
       gsap.fromTo(
         "#dark-overlay",
-        { opacity: 0 },
+        { opacity: 0, duration: 0.3 },
         { opacity: 0.5, duration: 1 }
       );
     }, 1000);
