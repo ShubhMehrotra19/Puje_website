@@ -54,25 +54,25 @@ const GetInTouch = ({ posix, zoom = defaults.zoom }: MapProps) => {
           <p>E: info@pujegroup.com</p>
         </div>
         <div className="flex flex-col gap-5 w-full">
-          <input type="text" placeholder="  Name*" className="h-7 rounded-sm" />
+          <input type="text" placeholder="Name*" className="h-fit rounded-sm pl-2 py-2" />
           <input
             type="text"
-            placeholder="  Email*"
-            className="h-7 rounded-sm"
+            placeholder="Email*"
+            className="h-fit rounded-sm pl-2 py-2"
           />
           <input
             type="text"
-            placeholder="  Phone No.*"
-            className="h-7 rounded-sm"
+            placeholder="Phone No.*"
+            className="h-fit rounded-sm pl-2 py-2"
           />
           <input
             type="text"
-            placeholder="  Message*"
-            className="h-16 rounded-sm"
+            placeholder="Message*"
+            className="h-fit rounded-sm pl-2 py-8"
           />
         </div>
         <div>
-          <button className="bg-black p-3 rounded-sm text-white font-[beaufort] mt-3">
+          <button className="bg-black p-3 rounded-sm text-white font-[beaufort] mt-3 ">
             <p>Send Message</p>
           </button>
         </div>

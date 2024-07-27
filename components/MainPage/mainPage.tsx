@@ -5,7 +5,7 @@ import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
 import ListedPage from "../ListedPage/ListedPage";
-import Hero from "../Hero/Hero";
+import Hero from "../hero/hero";
 
 gsap.registerPlugin(ScrollTrigger);
 

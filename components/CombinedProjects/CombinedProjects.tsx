@@ -5,10 +5,9 @@ const CombinedProjects = () => {
   return (
     <>
       <div className="flex flex-col gap-10 mb-32">
-        <h1 className="text-4xl text-[#D7B56D] text-center font-semibold">
+        <h1 className="w-[80%] mx-auto pb-5 text-4xl text-[#D7B56D] text-center font-semibold mb-12 border-b-2 border-[#212121]/40">
           Flagship Project
         </h1>
-        <hr className="border-t-2 border-[#C9C9C9] mx-10" />
         <div className="flex justify-between  items-center">
           <div className="flex-1 flex justify-center relative">
             <Image
@@ -51,11 +50,13 @@ const CombinedProjects = () => {
           </div>
         </div>
       </div>
+
+
+
       <div className="flex flex-col gap-10 mb-32">
-        <h1 className="text-4xl text-[#D7B56D] text-center font-semibold">
+        <h1 className="w-[80%] mx-auto pb-5 text-4xl text-[#D7B56D] text-center font-semibold mb-12 border-b-2 border-[#212121]/40">
           Ongoing Projects
         </h1>
-        <hr className="border-t-2 border-[#C9C9C9] mx-10" />
         <div className="flex justify-around relative">
           <div className="absolute left-0 top-0  ">
             <Image

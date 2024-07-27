@@ -7,7 +7,7 @@ function Hero(props: Props) {
 
     return (
         <div className='h-[700px] w-full flex justify-center items-center'>
-            <p className='font-["beaufort"] font-medium text-6xl text-center leading-normal uppercase text-[#D7B56D]'>
+            <p className='font-["beaufort"] font-medium text-6xl text-center leading-normal uppercase text-[#D7B56D] pt-[150px]'>
                 Redefining <br /> Realty
             </p>
         </div>
