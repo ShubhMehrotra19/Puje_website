@@ -39,7 +39,7 @@ export default function Home() {
          <Decoding/>
         <DesignPhilosophy />
        <CombinedProjects/>
-        <div className="w-full">
+        <div className="w-full z-0">
           <GetInTouch posix={[19.026353, 72.851802]} />
         </div>
         <Footer />

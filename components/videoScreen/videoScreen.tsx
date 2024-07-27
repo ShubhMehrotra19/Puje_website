@@ -12,12 +12,12 @@ function VideoScreen(props: Props) {
     setTimeout(() => {
       setShow(true);
       gsap.fromTo(
-        ".animated-logo",
+        "#animated-logo",
         { opacity: 0 },
         { opacity: 1, duration: 2, delay: 0.75, ease: "power4.inOut" }
       );
       gsap.fromTo(
-        ".dark-overlay",
+        "#dark-overlay",
         { opacity: 0 },
         { opacity: 0.5, duration: 1 }
       );
@@ -34,15 +34,19 @@ function VideoScreen(props: Props) {
         muted
       />
       {show && (
-        <div className="absolute top-0 left-0 w-full h-full bg-black dark-overlay pointer-events-none opacity-20"></div>
+        <div
+          id="dark-overlay"
+          className="absolute top-0 left-0 w-full h-full bg-black pointer-events-none opacity-20"
+        ></div>
       )}
       {show && (
         <Image
-          className="absolute inset-0 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 animated-logo"
+          id="animated-logo"
+          className="absolute inset-0 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
           src="/images/pujeVideoLogo.png"
           height={140}
           width={400}
-          alt=''
+          alt=""
         />
       )}
     </div>
