@@ -6,15 +6,23 @@ import React, { useState, useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
 import ListedPage from "../ListedPage/ListedPage";
 import Hero from "../hero/hero";
+import Menu from "../Menu/Menu";
+import Navbar from "../Navbar/Navbar";
 
 gsap.registerPlugin(ScrollTrigger);
 
 interface Props {}
 
-function MainPage(props: Props) {
+function ParentComponent(props: Props) {
   const [width, setWidth] = useState(0);
   const [animationComplete, setAnimationComplete] = useState(false);
+  const [menuClicked, setMenuClicked] = useState(false);
   const lenisRef = useRef<Lenis | null>(null);
+
+  function handleMenuClick() {
+    setMenuClicked(!menuClicked);
+    document.body.style.overflow = !menuClicked ? "hidden" : "auto"; // Disable scrolling when menu is open
+  }
 
   useEffect(() => {
     const updateWidth = () => setWidth(document.documentElement.clientWidth);
@@ -90,7 +98,7 @@ function MainPage(props: Props) {
         { opacity: 0 },
         { opacity: 1, duration: 1.2, ease: "power4.inOut" }
       );
-      gsap.fromTo('.navbar', {height: '150px'}, {height: '100px', duration: 1, ease: 'power4.inOut'})
+      gsap.fromTo('.navbar', { height: '150px' }, { height: '100px', duration: 1, ease: 'power4.inOut' });
     }
   }, [animationComplete]);
 
@@ -100,9 +108,45 @@ function MainPage(props: Props) {
     }
   }, [animationComplete]);
 
+  useEffect(() => {
+    if (menuClicked) {
+      gsap.fromTo(
+        ".menu",
+        { y: -1000 },
+        { y: 0, duration: 0.3, ease: "power4.inOut" }
+      );
+    }
+  }, [menuClicked]);
+
   return (
     <>
-      <Navbar animationComplete={animationComplete} />
+      <Navbar animationComplete={animationComplete} handleMenuClick={handleMenuClick} menuClicked={menuClicked} />
+      {menuClicked && <Menu className="menu" />}
+      {menuClicked && (
+        <Image
+          onClick={handleMenuClick}
+          className="fixed top-[50px] left-[50px] z-50 cursor-pointer"
+          src="/images/close.png"
+          height={40}
+          width={25}
+          alt="Close"
+        />
+      )}
+      {!menuClicked && (
+        <MainPage animationComplete={animationComplete} width={width} />
+      )}
+    </>
+  );
+}
+
+interface MainPageProps {
+  animationComplete: boolean;
+  width: number;
+}
+
+function MainPage({ animationComplete, width }: MainPageProps) {
+  return (
+    <>
       {!animationComplete ? (
         <div className="mainPage flex flex-col items-center shadow-md justify-center max-h-full overflow-hidden pt-[150px] mb-20">
           <div className="image w-full h-[650px] relative">
@@ -146,87 +190,4 @@ function MainPage(props: Props) {
   );
 }
 
-interface NavbarProps {
-  animationComplete: boolean;
-}
-
-function Navbar({ animationComplete }: NavbarProps) {
-  return (
-    <div
-      className={`navbar z-20 w-full shadow-md fixed top-0 left-0 right-0 bg-white transition-height duration-300 ${
-        animationComplete ? "h-[100px]" : "h-[150px]"
-      }`}
-    >
-      <div className={`max-w-[85rem] mx-auto flex items-center h-full w-full ${animationComplete ? `justify-between` : `justify-center`}`}>
-          {animationComplete && (
-            <Image
-            className="hover:cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 mr-8"
-            src="/images/menu.png"
-            height={40}
-            width={25}
-            alt=""
-          />
-          )}
-        <div className="flex flex-col justify-center gap-2">
-          {!animationComplete && (
-            <>
-              <div className="flex justify-center items-center gap-2">
-                <Image
-                  className="letter"
-                  src="/images/P.png"
-                  width={50}
-                  height={47}
-                  alt="P"
-                />
-                <Image
-                  className="letter"
-                  src="/images/U.png"
-                  width={50}
-                  height={47}
-                  alt="U"
-                />
-                <Image
-                  className="letter"
-                  src="/images/J.png"
-                  width={38}
-                  height={44}
-                  alt="J"
-                />
-                <Image
-                  className="letter"
-                  src="/images/E.png"
-                  width={50}
-                  height={47}
-                  alt="E"
-                />
-              </div>
-              <Image
-                className="group"
-                src="/images/group.png"
-                height={22}
-                width={240}
-                alt="Group"
-              />
-            </>
-          )}
-          {animationComplete && (
-            <Image
-              id="logoPuje"
-              src={"/images/logoPuje.png"}
-              height={50}
-              width={20}
-              alt="Logo"
-            />
-          )}
-        </div>
-        {animationComplete && (
-          <button className='rounded-sm bg-[#D7B56D] text-white font-["beaufort"] text-center w-fit px-5 py-3 hover:bg-[#d5b266] hover:scale-[102%] transition-all duration-300 active:scale-95'>
-          Contact Us
-        </button>
-        )}
-      </div>
-    </div>
-  );
-}
-
-export default MainPage;
+export default ParentComponent;
