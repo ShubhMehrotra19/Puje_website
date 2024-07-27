@@ -14,10 +14,10 @@ const CompletedProjects = () => {
             />
         </div>
         <div className=' flex flex-col  gap-20 uppercase '>
-        <div className='w-full flex justify-center '>
-                <p className=' capitalize'>We have executed & handed over with Occupation Certificate all our projects.</p>
-            </div>
-          <div className=' flex justify-evenly text-[#D7B56D] '>
+        <div className='w-full flex justify-center md:p-0 px-2'>
+                <p className=' capitalize text-center'>We have executed & handed over with Occupation Certificate all our projects.</p>
+        </div>
+          <div className=' flex justify-evenly text-[#D7B56D] md:flex-row flex-col md:gap-0 gap-20'>
               <CardComponent 
               image='/images/Blank.png'
               name='Darshan Constructions'
@@ -27,7 +27,7 @@ const CompletedProjects = () => {
               name='Darshan Constructions'
               />
           </div>
-          <div className=' flex justify-evenly text-[#D7B56D]'>
+          <div className=' flex justify-evenly text-[#D7B56D]  md:flex-row flex-col  md:gap-0 gap-20'>
               <CardComponent 
               image='/images/Blank.png'
               name='Darshan Constructions'
@@ -37,7 +37,7 @@ const CompletedProjects = () => {
               name='Darshan Constructions'
               />
           </div>
-          <div className=' flex justify-evenly text-[#D7B56D]'>
+          <div className=' flex justify-evenly text-[#D7B56D]  md:flex-row flex-col  md:gap-0 gap-20'>
               <CardComponent 
               image='/images/Blank.png'
               name='Darshan Constructions'
@@ -47,7 +47,7 @@ const CompletedProjects = () => {
               name='Darshan Constructions'
               />
           </div>
-          <div className=' flex justify-evenly text-[#D7B56D]'>
+          <div className=' flex justify-evenly text-[#D7B56D]  md:flex-row flex-col  md:gap-0 gap-20'>
               <CardComponent 
               image='/images/Blank.png'
               name='Darshan Constructions'
@@ -57,7 +57,7 @@ const CompletedProjects = () => {
               name='Darshan Constructions'
               />
           </div>
-          <div className=' flex justify-evenly text-[#D7B56D]'>
+          <div className=' flex justify-evenly text-[#D7B56D]  md:flex-row flex-col  md:gap-0 gap-20'>
               <CardComponent 
               image='/images/Blank.png'
               name='Darshan Constructions'
@@ -67,7 +67,7 @@ const CompletedProjects = () => {
               name='Darshan Constructions'
               />
           </div>
-          <div className=' flex justify-evenly text-[#D7B56D]'>
+          <div className=' flex justify-evenly text-[#D7B56D]  md:flex-row flex-col  md:gap-0 gap-20'>
               <CardComponent 
               image='/images/Blank.png'
               name='Darshan Constructions'
@@ -77,7 +77,7 @@ const CompletedProjects = () => {
               name='Darshan Constructions'
               />
           </div>
-          <div className=' flex justify-evenly text-[#D7B56D]'>
+          <div className=' flex justify-evenly text-[#D7B56D]  md:flex-row flex-col  md:gap-0 gap-20'>
               <CardComponent 
               image='/images/Blank.png'
               name='Darshan Constructions'
@@ -87,7 +87,7 @@ const CompletedProjects = () => {
               name='Darshan Constructions'
               />
           </div>
-          <div className=' flex justify-evenly text-[#D7B56D]'>
+          <div className=' flex justify-evenly text-[#D7B56D]  md:flex-row flex-col  md:gap-0 gap-20'>
               <CardComponent 
               image='/images/Blank.png'
               name='Darshan Constructions'

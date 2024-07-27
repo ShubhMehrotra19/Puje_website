@@ -64,8 +64,10 @@ const CombinedProjects = () => {
         <h1 className="w-[80%] mx-auto pb-5 text-5xl text-[#D7B56D] text-center font-[beaufort] mb-12 md:border-b-2 md:border-[#212121]/40">
           Ongoing Projects
         </h1>
+
         <div className="flex justify-around relative md:flex-row flex-col-reverse gap-3">
           <div className="absolute left-0 top-0 hidden md:block">
+
             <Image
               src="/images/OG_PRO_BG2.png"
               alt="logo"
