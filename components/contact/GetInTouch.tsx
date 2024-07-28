@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { LatLngExpression, LatLngTuple } from "leaflet";
 import "../../utils/leaflet-client";
-import Link from "next/link";
+import { Fade } from "react-awesome-reveal";
 
 interface MapProps {
   posix: LatLngExpression | LatLngTuple;
@@ -43,13 +43,19 @@ const GetInTouch = ({ posix, zoom = defaults.zoom }: MapProps) => {
 
       <div className="flex flex-col justify-center items-center md:w-1/2 w-full gap-5 md:px-20 px-5">
         <div className="text-[#D7B56D] text-5xl font-[beaufort]">
-          <p>Get in Touch</p>
+          <Fade triggerOnce direction="up">
+            <p>Get in Touch</p>
+          </Fade>
         </div>
-        <div className="w-full text-center md:block hidden">
-          Puje Ananta, Plot Nos. 296 & 289, B.A.Khimji Road, <br />
-          Opp. Napoo Garden, Matunga East,Mumbai-400019{" "}
-        </div>
-        <p className="md:block hidden">E: info@pujegroup.com</p>
+        <Fade triggerOnce direction="up">
+          <div className="w-full text-center md:block hidden">
+            Puje Ananta, Plot Nos. 296 & 289, B.A.Khimji Road, <br />
+            Opp. Napoo Garden, Matunga East,Mumbai-400019{" "}
+          </div>
+        </Fade>
+        <Fade triggerOnce direction="up">
+          <p className="md:block hidden">E: info@pujegroup.com</p>
+        </Fade>
         <div className="flex flex-col gap-5 w-full mb-3">
           <input
             type="text"
@@ -72,11 +78,11 @@ const GetInTouch = ({ posix, zoom = defaults.zoom }: MapProps) => {
             className="h-fit rounded-sm pl-2 py-8 border-2 border-black/50"
           />
         </div>
-        <div>
+        <Fade triggerOnce direction="up">
           <button className="bg-black py-3 px-5 rounded-sm text-white font-[beaufort] hover:bg-black/90 hover:scale-[102%] transition-all duration-300">
-            <p>Send Message</p>
+            Send Message
           </button>
-        </div>
+        </Fade>
       </div>
     </div>
   );
