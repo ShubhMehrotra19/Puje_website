@@ -49,7 +49,7 @@ const CombinedProjects = () => {
             </button>
             <div className="absolute right-0 top-0 bottom-0 hidden md:block">
               <Image
-                src="/images/FlLAG_PRO_BG.png"
+                src="/images/FLAG_PRO_BG.png"
                 alt=""
                 width={100}
                 height={200}
