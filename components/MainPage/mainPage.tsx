@@ -193,7 +193,7 @@ function MainPage({ animationComplete, width }: MainPageProps) {
               fill
               alt=""
             />
-            <div className="absolute top-[10%] left-[35%] flex flex-col justify-center items-center w-fit">
+            <div className="absolute top-[10%] left-[25%] flex flex-col justify-center items-center w-fit">
               <Image
                 src="/images/logo_puje.png"
                 height={200}
