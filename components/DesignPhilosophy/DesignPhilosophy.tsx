@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Fade } from "react-awesome-reveal";
 
 const DesignPhilosophy = () => {
   return (
@@ -8,9 +9,11 @@ const DesignPhilosophy = () => {
       <div className="flex w-full py-12 px-10 justify-evenly">
         <div className="flex flex-col justify-center gap-5">
           <div className="flex flex-col gap-5 md:pl-12">
+            <Fade triggerOnce direction="up">
             <p className="font-[beaufort] text-5xl text-[#D7B56D] border-b-2 border-[#D7B56D] pb-5">
               Design Philosophy
             </p>
+            </Fade>
           </div>
           <div className="flex flex-col gap-8 justify-start">
             {[
@@ -61,8 +64,10 @@ const DesignPhilosophy = () => {
                   />
                 </div>
                 <div className="flex flex-col justify-center">
+                  <Fade triggerOnce direction="up" cascade damping={0.1}>
                   <p className="text-[#D7B56D] font-semibold">{item.title}</p>
                   <p>{item.desc}</p>
+                  </Fade>
                 </div>
               </div>
             ))}
@@ -70,18 +75,22 @@ const DesignPhilosophy = () => {
         </div>
 
         <div className="relative w-1/3">
+          <Fade triggerOnce>
           <Image
             src="/images/dsgn_phil.png"
             alt="Design Philosophy"
             fill
             className="object-contain"
           />
+          </Fade>
         </div>
       </div>
       <div>
+        <Fade triggerOnce direction="up">
         <button className="bg-black px-5 py-2 rounded-sm text-white font-[beaufort] mt-3 hover:cursor-pointer hover:scale-[102%] hover:bg-black/90 active:scale-95 transition-all duration-300">
           Know More
         </button>
+        </Fade>
       </div>
     </div>
 
@@ -89,17 +98,21 @@ const DesignPhilosophy = () => {
 
     <div className="md:hidden visible flex flex-col justify-center items-center w-full px-10 gap-10 mb-32">
     <div className="flex flex-col w-full justify-evenly">
-        <Image
+       <Fade triggerOnce>
+       <Image
           src="/images/dsgn_phil.png"
           alt="Design Philosophy"
           height={850}
           width={650}
         />
+       </Fade>
       </div>
       <div className="flex flex-col justify-center gap-5 items-center">
+          <Fade triggerOnce direction="up">
           <p className="font-[beaufort] text-3xl text-[#D7B56D] border-b-2 border-[#D7B56D] pb-3 w-fit">
             Design Philosophy
           </p>
+          </Fade>
 
         <div className="flex flex-col gap-8 justify-start">
           {[
@@ -142,25 +155,31 @@ const DesignPhilosophy = () => {
           ].map((item, index) => (
             <div key={index} className="flex gap-2">
               <div className="relative w-10 h-10">
+                <Fade triggerOnce>
                 <Image
                   src={item.src}
                   alt={item.alt}
                   fill
                   className="object-contain"
                 />
+                </Fade>
               </div>
               <div className="flex flex-col justify-center">
+                <Fade triggerOnce direction="up">
                 <p className="text-[#D7B56D] font-semibold">{item.title}</p>
                 <p>{item.desc}</p>
+                </Fade>
               </div>
             </div>
           ))}
         </div>
       </div>
     <div>
+      <Fade triggerOnce direction="up">
       <button className="bg-black px-5 py-2 rounded-sm text-white font-[beaufort] mt-3 hover:cursor-pointer hover:scale-[102%] hover:bg-black/90 active:scale-95 transition-all duration-300">
         Know More
       </button>
+      </Fade>
     </div>
     </div>
   </>

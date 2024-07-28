@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 
 interface Props {
   className?: string;
@@ -12,6 +13,7 @@ function Menu({ className }: Props) {
   className={`relative w-screen h-screen z-20 ${className} bg-gradient-to-b from-[#7dacc0] via-[#d2d7d3] to-[#eedab7] md:flex hidden justify-between items-center`}
 >
   <div className="w-1/2 flex flex-col pl-12 gap-6 justify-start items-start">
+    <Fade cascade direction="left" damping={0.2}>
     <p className='font-["beaufort"] pb-2 text-4xl uppercase cursor-pointer text-white hover:scale-105 hover:border-b-2 hover:border-white/60 transition-all duration-300'>
       Home
     </p>
@@ -24,6 +26,7 @@ function Menu({ className }: Props) {
     <p className='font-["beaufort"] pb-2 text-4xl uppercase cursor-pointer text-white hover:scale-105 hover:border-b-2 hover:border-white/60 transition-all duration-300'>
       Contact Us
     </p>
+    </Fade>
   </div>
   <div className="w-1/2 h-full relative">
     <Image
