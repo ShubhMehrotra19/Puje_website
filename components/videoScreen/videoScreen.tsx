@@ -40,14 +40,24 @@ function VideoScreen(props: Props) {
         ></div>
       )}
       {show && (
+        <>
         <Image
           id="animated-logo"
-          className="absolute inset-0 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          className="absolute inset-0 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 md:block hidden"
           src="/images/pujeVideoLogo.png"
           height={140}
           width={400}
           alt=""
         />
+        <Image
+          id="animated-logo"
+          className="absolute inset-0 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 md:hidden block"
+          src="/images/pujeVideoLogo.png"
+          height={90}
+          width={240}
+          alt=""
+        />
+        </>
       )}
     </div>
   );
