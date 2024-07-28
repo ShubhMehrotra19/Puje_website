@@ -193,7 +193,7 @@ function MainPage({ animationComplete, width }: MainPageProps) {
               fill
               alt=""
             />
-            <div className="absolute top-[10%] left-[25%] flex flex-col justify-center items-center w-fit">
+            <div className="absolute top-[10%] left-[30%] flex flex-col justify-center items-center w-fit">
               <Image
                 src="/images/logo_puje.png"
                 height={200}
@@ -206,7 +206,7 @@ function MainPage({ animationComplete, width }: MainPageProps) {
             </div>
             <Image
               id="logo"
-              className="absolute top-[80%] left-1/2 cursor-pointer z-0"
+              className="absolute top-[80%] left-[45%] cursor-pointer z-0"
               src="/images/logoPuje.png"
               height={90}
               width={36}
