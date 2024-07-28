@@ -79,7 +79,7 @@ const CombinedProjects = () => {
               alt="Ongoing Project 1"
               height={391}
               width={423}
-              className="mx-auto transition-all duration-300 group-hover:brightness-50 rounded-lg shadow-md"
+              className="mx-auto transition-all duration-300 md:group-hover:brightness-50 rounded-lg shadow-md"
             />
             <button
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
