@@ -206,7 +206,7 @@ function MainPage({ animationComplete, width }: MainPageProps) {
             </div>
             <Image
               id="logo"
-              className="absolute top-[80%] left-[40%] cursor-pointer z-0"
+              className="absolute top-[80%] left-[43%] cursor-pointer z-0"
               src="/images/logoPuje.png"
               height={90}
               width={36}
