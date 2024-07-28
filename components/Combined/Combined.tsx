@@ -7,17 +7,12 @@ const Combined = () => {
       {/* Sculpted, Not Built Component */}
 
       <div className="absolute left-0 bottom-0 hidden md:block">
-        <Image
-          src="/images/OG_PRO_BG2.png"
-          alt="logo"
-          height={200}
-          width={100}
-        />
+        <Image src="/images/OG_PRO_BG2.png" alt="" height={200} width={100} />
       </div>
       <div className="absolute right-0 top-96 hidden md:block">
         <Image
-          src="/images/Flag_PRO_BG.png"
-          alt="logo"
+          src="/images/FLAG_PRO_BG.png"
+          alt=""
           width={100}
           height={200}
           objectFit="contain"
