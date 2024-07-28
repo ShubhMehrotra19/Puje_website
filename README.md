@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PUJE WEBSITE
 
-## Getting Started
+The following are the components with their filenames as in the project -
 
-First, run the development server:
+- Top 4 Components [/components/Combined/Combined.tsx]
+  ![alt text](./image.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Design Philosophy Component [/components/DesignPhilosophy/DesignPhilosophy.tsx]
+  ![alt text](./image-1.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Flagship and Ongoing Component [/components/CombinedProjects/CombinedProjects.tsx]
+  ![alt text](./image-2.png)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Get in Touch [/components/contact/GetInTouch.tsx]
+  ![alt text](./image-3.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Footer [/components/Footer/Footer.tsx]
+  ![alt text](./image-1.png)
 
-## Learn More
+- Decoding the Puje Flame [/components/Decoding/Decoding.tsx]
+  ![alt text](./image-5.png)
 
-To learn more about Next.js, take a look at the following resources:
+- Completed Projects Page 1 [/app/CompletedProjects/page.tsx]
+  ![alt text](./image-7.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Completed Projects Page 2 [/app/projects/page.tsx]
+  ![alt text](./image-6.png)
