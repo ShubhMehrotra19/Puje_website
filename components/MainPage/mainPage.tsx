@@ -166,7 +166,7 @@ function MainPage({ animationComplete, width }: MainPageProps) {
           <div className="image w-full h-[650px] relative md:block hidden">
             <Image
               className="relative"
-              src="/images/mainImage.png"
+              src="/images/MainImage.png"
               height={100}
               width={width}
               alt=""
