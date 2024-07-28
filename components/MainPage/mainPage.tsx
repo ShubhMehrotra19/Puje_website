@@ -113,8 +113,14 @@ function ParentComponent(props: Props) {
       gsap.fromTo(
         ".menu",
         { y: -1000 },
-        { y: 0, duration: 0.3, ease: "power4.inOut" }
+        { y: 0, duration: 1, ease: "power4.inOut" }
       );
+    } else {
+      gsap.fromTo(
+        ".menu",
+        { y: 0 },
+        { y: -1000, duration: 1, ease: "power4.inOut" }
+      )
     }
   }, [menuClicked]);
 
@@ -149,7 +155,7 @@ function MainPage({ animationComplete, width }: MainPageProps) {
     <>
       {!animationComplete ? (
         <div className="mainPage flex flex-col items-center shadow-md justify-center max-h-full overflow-hidden pt-[150px] mb-20">
-          <div className="image w-full h-[650px] relative">
+          <div className="image w-full h-[650px] relative md:block hidden">
             <Image
               className="relative"
               src="/images/mainImage.png"
@@ -174,6 +180,36 @@ function MainPage({ animationComplete, width }: MainPageProps) {
               src="/images/logoPuje.png"
               height={150}
               width={60}
+              alt=""
+            />
+          </div>
+
+          {/* Mobile */}
+
+          <div className="image w-screen h-screen relative md:hidden block">
+            <Image
+              className="relative object-cover"
+              src="/images/mobileMainpage.png"
+              fill
+              alt=""
+            />
+            <div className="absolute top-[10%] left-[35%] flex flex-col justify-center items-center w-fit">
+              <Image
+                src="/images/logo_puje.png"
+                height={200}
+                width={120}
+                alt="Logo"
+              />
+              <p className="font-[beaufort] text-center text-white text-3xl uppercase leading-tight tracking-wider">
+                Redefining <br /> Realty
+              </p>
+            </div>
+            <Image
+              id="logo"
+              className="absolute top-[80%] left-1/2 cursor-pointer z-0"
+              src="/images/logoPuje.png"
+              height={90}
+              width={36}
               alt=""
             />
           </div>
