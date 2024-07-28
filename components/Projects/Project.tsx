@@ -44,7 +44,7 @@ const Project = ({
       {subheading1 && (
         <div className="flex gap-2 text-[#D7B56D] md:text-xl text-xs items-center pl-2">
           <p className="md:text-4xl text-xl pb-1">•</p>
-          <p>{subheading}</p>
+          <p>{subheading1}</p>
         </div>
       )}
       <p className={className}>{content1}</p>
