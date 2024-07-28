@@ -44,7 +44,7 @@ const CombinedProjects = () => {
               promising connectivity, tranquillity and exclusivity, Ananta truly
               is the Landmark sculpted for those who have made their Marks.
             </p>
-            <button className="bg-black text-white px-8 py-3 rounded-sm w-fit hover:bg-gray-800 transition-colors duration-300">
+            <button className="bg-black px-5 py-2 rounded-sm text-white font-[beaufort] mt-3 hover:cursor-pointer hover:scale-[102%] hover:bg-black/90 active:scale-95 transition-all duration-300">
               Know More
             </button>
             <div className="absolute right-0 top-0 bottom-0 hidden md:block">
@@ -67,7 +67,6 @@ const CombinedProjects = () => {
 
         <div className="flex justify-around relative md:flex-row flex-col-reverse gap-3">
           <div className="absolute left-0 top-0 hidden md:block">
-
             <Image
               src="/images/OG_PRO_BG2.png"
               alt="logo"

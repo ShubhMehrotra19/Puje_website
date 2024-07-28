@@ -98,7 +98,11 @@ function ParentComponent(props: Props) {
         { opacity: 0 },
         { opacity: 1, duration: 1.2, ease: "power4.inOut" }
       );
-      gsap.fromTo('.navbar', { height: '150px' }, { height: '100px', duration: 1, ease: 'power4.inOut' });
+      gsap.fromTo(
+        ".navbar",
+        { height: "150px" },
+        { height: "100px", duration: 1, ease: "power4.inOut" }
+      );
     }
   }, [animationComplete]);
 
@@ -126,7 +130,11 @@ function ParentComponent(props: Props) {
 
   return (
     <>
-      <Navbar animationComplete={animationComplete} handleMenuClick={handleMenuClick} menuClicked={menuClicked} />
+      <Navbar
+        animationComplete={animationComplete}
+        handleMenuClick={handleMenuClick}
+        menuClicked={menuClicked}
+      />
       {menuClicked && <Menu className="menu" />}
       {menuClicked && (
         <Image

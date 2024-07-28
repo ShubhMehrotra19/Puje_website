@@ -4,6 +4,8 @@ import Image from "next/image";
 const Combined = () => {
   return (
     <div className="w-full mb-24 relative ">
+      {/* Sculpted, Not Built Component */}
+
       <div className="absolute left-0 bottom-0 hidden md:block">
         <Image
           src="/images/OG_PRO_BG2.png"
@@ -23,10 +25,12 @@ const Combined = () => {
       </div>
       <div className="md:px-24 mb-24">
         <div className="flex md:justify-evenly ">
-          <div className="flex flex-col gap-4 md:w-1/2 justify-center md:pr-10 items-center md:items-start md:px-0 px-5">
-            <p className="text-[#D7B56D] md:text-5xl font-[beaufort] text-4xl text-center md:text-start border-b-[1px] border-[#D7B56D] pb-8 md:border-b-0 w-full md:pb-0">
-              Sculpted, Not Built
-            </p>
+          <div className="flex flex-col gap-4 md:w-1/2 justify-center md:pr-10 items-center md:items-start ">
+            <div className="w-full px-5 md:px-0">
+              <p className="text-[#D7B56D] md:text-5xl font-[beaufort] text-4xl text-center md:text-start border-b-[1px] border-[#D7B56D] pb-8 md:border-b-0 w-full md:pb-0">
+                Sculpted, Not Built
+              </p>
+            </div>
             <div className="w-full md:hidden">
               <Image
                 src={"/images/resp-sculpted.png"}
@@ -35,7 +39,7 @@ const Combined = () => {
                 width={430}
               />
             </div>
-            <div className="leading-relaxed text-justify md:max-w-[50ch] flex flex-col gap-10 md:border-t-[1px] border-[#D7B56D] md:pt-10">
+            <div className="leading-relaxed text-justify md:max-w-[50ch] flex flex-col gap-10 md:border-t-[1px] border-[#D7B56D] md:pt-10 px-5 md:px-0">
               <p>
                 At Puje Group, we don't just build houses, but craft homes that
                 radiate warmth. We believe in humanizing the corporate world of
@@ -62,23 +66,26 @@ const Combined = () => {
           </div>
         </div>
       </div>
+
+      {/* Years of experience */}
+
       <div className="md:bg-[#D0B06B] flex flex-col justify-evenly md:bg-opacity-5 mb-12 md:flex-row ">
         <div className="flex gap-10 p-10 md:flex-row flex-col">
-          <div className="flex flex-col md:border-r-[1px] border-[#D7B56D] pr-10 items-center gap-4">
+          <div className="flex flex-col md:border-r-[1px] border-[#D7B56D] md:pr-10 items-center gap-4">
             <p className="text-5xl font-[beaufort] text-[#D7B56D]">35+</p>
             <p className="max-w-[15ch] text-center">
               Year of real estate experience{" "}
             </p>
           </div>
-          <div className="flex flex-col md:border-r-[1px] border-[#D7B56D] pr-10 items-center gap-4">
+          <div className="flex flex-col md:border-r-[1px] border-[#D7B56D] md:pr-10 items-center gap-4">
             <p className="text-5xl font-[beaufort] text-[#D7B56D]">50+</p>
             <p className="text-center max-w-[10ch]">Projects Completed</p>
           </div>
-          <div className="flex flex-col md:border-r-[1px] border-[#D7B56D] pr-10 items-center gap-4">
+          <div className="flex flex-col md:border-r-[1px] border-[#D7B56D] md:pr-10 items-center gap-4">
             <p className="text-5xl font-[beaufort] text-[#D7B56D]">10K+</p>
             <p className="text-center max-w-[10ch]">Happy Families </p>
           </div>
-          <div className="flex flex-col md:border-r-[1px] border-[#D7B56D] pr-10 items-center gap-4">
+          <div className="flex flex-col md:border-r-[1px] border-[#D7B56D] md:pr-10 items-center gap-4">
             <p className="text-5xl font-[beaufort] text-[#D7B56D]">5M+ Sq.Ft</p>
             <p className="text-center max-w-[10ch]">Constructed Area </p>
           </div>
@@ -90,6 +97,9 @@ const Combined = () => {
           </div>
         </div>
       </div>
+
+      {/* vision and mission component for desktop screen */}
+
       <div className="flex justify-evenly md:px-24 mb-24 md:flex-row flex-col gap-16 md:gap-0">
         <div className="flex flex-col items-center mt-12 md:gap-10 gap-5">
           <div className="flex justify-center items-center gap-4">
@@ -129,6 +139,8 @@ const Combined = () => {
         </div>
       </div>
 
+      {/* values component for desktop screen */}
+
       <div className="bg-[#D0B06B] md:flex flex-col items-center bg-opacity-5 p-5 hidden">
         <div className="flex gap-5">
           <Image
@@ -158,6 +170,7 @@ const Combined = () => {
       </div>
 
       {/* mobile screen values component */}
+
       <div className=" flex flex-col items-center pr-5 md:hidden gap-10">
         <div className="flex gap-5">
           <Image
