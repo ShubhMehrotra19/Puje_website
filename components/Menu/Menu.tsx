@@ -8,33 +8,34 @@ interface Props {
 function Menu({ className }: Props) {
   return (
     <>
-      <div
-        className={`relative w-screen h-screen z-20 ${className} bg-gradient-to-b from-[#7dacc0] via-[#d2d7d3] to-[#eedab7] justify-between items-center md:block hidden`}
-      >
-        <div className="w-1/2 flex flex-col pl-12 gap-6 justify-start items-start">
-          <p className='font-["beaufort"] pb-2 text-4xl uppercase cursor-pointer text-white hover:scale-105 hover:border-b-2 hover:border-white/60 transition-all duration-300'>
-            Home
-          </p>
-          <p className='font-["beaufort"] pb-2 text-4xl uppercase cursor-pointer text-white hover:scale-105 hover:border-b-2 hover:border-white/60 transition-all duration-300'>
-            Projects
-          </p>
-          <p className='font-["beaufort"] pb-2 text-4xl uppercase cursor-pointer text-white hover:scale-105 hover:border-b-2 hover:border-white/60 transition-all duration-300'>
-            About Us
-          </p>
-          <p className='font-["beaufort"] pb-2 text-4xl uppercase cursor-pointer text-white hover:scale-105 hover:border-b-2 hover:border-white/60 transition-all duration-300'>
-            Contact Us
-          </p>
-        </div>
-        <div className="w-1/2 relative h-full">
-          <Image
-            src="/images/menuImage.png"
-            alt=""
-            fill
-            className="object-contain h-full"
-            style={{ objectPosition: "right" }}
-          />
-        </div>
-      </div>
+     <div
+  className={`relative w-screen h-screen z-20 ${className} bg-gradient-to-b from-[#7dacc0] via-[#d2d7d3] to-[#eedab7] md:flex hidden justify-between items-center`}
+>
+  <div className="w-1/2 flex flex-col pl-12 gap-6 justify-start items-start">
+    <p className='font-["beaufort"] pb-2 text-4xl uppercase cursor-pointer text-white hover:scale-105 hover:border-b-2 hover:border-white/60 transition-all duration-300'>
+      Home
+    </p>
+    <p className='font-["beaufort"] pb-2 text-4xl uppercase cursor-pointer text-white hover:scale-105 hover:border-b-2 hover:border-white/60 transition-all duration-300'>
+      Projects
+    </p>
+    <p className='font-["beaufort"] pb-2 text-4xl uppercase cursor-pointer text-white hover:scale-105 hover:border-b-2 hover:border-white/60 transition-all duration-300'>
+      About Us
+    </p>
+    <p className='font-["beaufort"] pb-2 text-4xl uppercase cursor-pointer text-white hover:scale-105 hover:border-b-2 hover:border-white/60 transition-all duration-300'>
+      Contact Us
+    </p>
+  </div>
+  <div className="w-1/2 h-full relative">
+    <Image
+      src="/images/menuImage.png"
+      alt=""
+      fill
+      className="object-contain h-full"
+      style={{ objectPosition: "right" }}
+    />
+  </div>
+</div>
+
 
       {/* Mobile */}
       <div
