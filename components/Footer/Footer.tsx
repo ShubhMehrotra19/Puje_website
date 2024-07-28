@@ -113,7 +113,7 @@ const Footer = () => {
           width={100}
         />
       </div>
-      <div className="text-white bg-black w-full border-white/80 p-5 border-t-[1px]">
+      <div className="text-white bg-black w-full border-white/80 p-5 border-t-[1px] md:hidden ">
         <div className="flex justify-center items-center gap-10">
           <Image
             src="/images/linkedin_logo.png"
