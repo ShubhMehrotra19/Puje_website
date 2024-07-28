@@ -387,8 +387,9 @@ const ProjectsPage = () => {
           />
         </div>
         <div className="flex flex-col gap-1">
-          {compProjects.map((proj) => (
+          {compProjects.map((proj, index) => (
             <Project
+              key={index}
               heading={proj.heading}
               subheading={proj.subheading}
               subheading1={proj.subheading1}
