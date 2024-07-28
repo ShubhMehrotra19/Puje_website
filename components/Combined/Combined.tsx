@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Fade } from "react-awesome-reveal";
 
 const Combined = () => {
   return (
@@ -22,41 +23,51 @@ const Combined = () => {
         <div className="flex md:justify-evenly ">
           <div className="flex flex-col gap-4 md:w-1/2 justify-center md:pr-10 items-center md:items-start ">
             <div className="w-full px-5 md:px-0">
-              <p className="text-[#D7B56D] md:text-5xl font-[beaufort] text-4xl text-center md:text-start border-b-[1px] border-[#D7B56D] pb-8 md:border-b-0 w-full md:pb-0">
-                Sculpted, Not Built
-              </p>
+              <Fade triggerOnce direction="up">
+                <p className="text-[#D7B56D] md:text-5xl font-[beaufort] text-4xl text-center md:text-start border-b-[1px] border-[#D7B56D] pb-8 md:border-b-0 w-full md:pb-0">
+                  Sculpted, Not Built
+                </p>
+              </Fade>
             </div>
             <div className="w-full md:hidden">
-              <Image
-                src={"/images/resp-sculpted.png"}
-                alt=""
-                height={100}
-                width={430}
-              />
+              <Fade triggerOnce>
+                <Image
+                  src={"/images/resp-sculpted.png"}
+                  alt=""
+                  height={100}
+                  width={430}
+                />
+              </Fade>
             </div>
             <div className="leading-relaxed text-justify md:max-w-[50ch] flex flex-col gap-10 md:border-t-[1px] border-[#D7B56D] md:pt-10 px-5 md:px-0">
-              <p>
-                At Puje Group, we don't just build houses, but craft homes that
-                radiate warmth. We believe in humanizing the corporate world of
-                realty redefining it by incorporating the dreams and aspirations
-                of every resident. We sculpt expanses of space that are planned
-                for the future, utilizing latest technologies as the foundation
-                for timeless designs leading to distinguished pieces of
-                architecture. With more than 50 successful projects in over 35
-                years, we have paved a legacy of creating living experience that
-                illuminate the lives of your families for generations to come.
-              </p>
+              <Fade triggerOnce direction="up">
+                <p>
+                  At Puje Group, we don't just build houses, but craft homes
+                  that radiate warmth. We believe in humanizing the corporate
+                  world of realty redefining it by incorporating the dreams and
+                  aspirations of every resident. We sculpt expanses of space
+                  that are planned for the future, utilizing latest technologies
+                  as the foundation for timeless designs leading to
+                  distinguished pieces of architecture. With more than 50
+                  successful projects in over 35 years, we have paved a legacy
+                  of creating living experience that illuminate the lives of
+                  your families for generations to come.
+                </p>
+              </Fade>
             </div>
           </div>
+
           <div className="w-1/3 justify-end hidden md:flex">
             <div className="relative w-4/5 aspect-[3/4] ">
-              <Image
-                src="/images/sculpted.png"
-                alt="Sculpted"
-                fill
-                sizes="(max-width: 768px) 80vw, 25vw"
-                style={{ objectFit: "cover" }}
-              />
+              <Fade triggerOnce>
+                <Image
+                  src="/images/sculpted.png"
+                  alt="Sculpted"
+                  fill
+                  sizes="(max-width: 768px) 80vw, 25vw"
+                  style={{ objectFit: "cover" }}
+                />
+              </Fade>
             </div>
           </div>
         </div>
@@ -99,38 +110,50 @@ const Combined = () => {
         <div className="flex flex-col items-center mt-12 md:gap-10 gap-5">
           <div className="flex justify-center items-center gap-4">
             <div>
-              <Image
-                src={"/images/vision.png"}
-                alt="Vision"
-                height={50}
-                width={132}
-              />
+              <Fade triggerOnce direction="left">
+                <Image
+                  src={"/images/vision.png"}
+                  alt="Vision"
+                  height={50}
+                  width={132}
+                />
+              </Fade>
             </div>
-            <p className="text-5xl font-[beaufort] text-[#D7B56D]">Vision</p>
+            <Fade triggerOnce direction="left">
+              <p className="text-5xl font-[beaufort] text-[#D7B56D]">Vision</p>
+            </Fade>
           </div>
-          <p className="md:max-w-[40ch] text-center">
-            To illuminate the lives of every individual we touch through ethical
-            real estate endeavors, thoughtful educational initiatives, and
-            people-first hospitality services.
-          </p>
+          <Fade direction="left" triggerOnce>
+            <p className="md:max-w-[40ch] text-center">
+              To illuminate the lives of every individual we touch through
+              ethical real estate endeavors, thoughtful educational initiatives,
+              and people-first hospitality services.
+            </p>
+          </Fade>
         </div>
         <hr className="border-r-[1px] h-24 border-[#D7B56D] md:flex flex-col flex-end mt-32 hidden" />
         <div className="flex flex-col items-center md:gap-10 gap-5">
           <div className="flex justify-center items-center gap-4">
             <div>
-              <Image
-                src={"/images/mission.png"}
-                alt="Mission"
-                height={50}
-                width={40}
-              />
+              <Fade direction="right" triggerOnce>
+                <Image
+                  src={"/images/mission.png"}
+                  alt="Mission"
+                  height={50}
+                  width={40}
+                />
+              </Fade>
             </div>
-            <p className="text-5xl font-[beaufort] text-[#D7B56D]">Mission</p>
+            <Fade direction="right" triggerOnce>
+              <p className="text-5xl font-[beaufort] text-[#D7B56D]">Mission</p>
+            </Fade>
           </div>
-          <p className="max-w-[40ch] text-center">
-            To build future-ready assets across real estate, education, and
-            hospitality domains, driven by our core values.
-          </p>
+          <Fade direction="right" triggerOnce>
+            <p className="max-w-[40ch] text-center">
+              To build future-ready assets across real estate, education, and
+              hospitality domains, driven by our core values.
+            </p>
+          </Fade>
         </div>
       </div>
 
@@ -138,28 +161,42 @@ const Combined = () => {
 
       <div className="bg-[#D0B06B] md:flex flex-col items-center bg-opacity-5 p-5 hidden">
         <div className="flex gap-5">
-          <Image
-            src={"/images/vision1.png"}
-            alt="Vision"
-            height={115}
-            width={70}
-          />
-          <p className="font-[beaufort] text-[#D0B06B] text-5xl">Values</p>
+          <Fade direction="up" triggerOnce>
+            <Image
+              src={"/images/vision1.png"}
+              alt="Vision"
+              height={115}
+              width={70}
+            />
+          </Fade>
+          <Fade triggerOnce direction="up">
+            <p className="font-[beaufort] text-[#D0B06B] text-5xl">Values</p>
+          </Fade>
         </div>
         <div className="flex gap-16 p-10">
           <div className="flex flex-col border-r-[1px] border-[#D7B56D] pr-16 items-center gap-4">
-            <p className="max-w-[10ch] text-center">People-First Design </p>
+            <Fade triggerOnce direction="up">
+              <p className="max-w-[10ch] text-center">People-First Design </p>
+            </Fade>
           </div>
           <div className="flex flex-col border-r-[1px] border-[#D7B56D] pr-16 items-center gap-4">
-            <p className="text-center max-w-[15ch]">
-              Customer - Centric Approach
-            </p>
+            <Fade direction="up" triggerOnce>
+              <p className="text-center max-w-[15ch]">
+                Customer - Centric Approach
+              </p>
+            </Fade>
           </div>
           <div className="flex flex-col border-r-[1px] border-[#D7B56D] pr-16 items-center gap-4">
-            <p className="text-center max-w-[10ch]">Adhering to Commitments </p>
+            <Fade direction="up" triggerOnce>
+              <p className="text-center max-w-[10ch]">
+                Adhering to Commitments{" "}
+              </p>
+            </Fade>
           </div>
           <div className="flex flex-col pr-16 items-center gap-4">
-            <p className="text-center max-w-[10ch]">Delivering Beyond </p>
+            <Fade direction="up" triggerOnce>
+              <p className="text-center max-w-[10ch]">Delivering Beyond </p>
+            </Fade>
           </div>
         </div>
       </div>
@@ -168,34 +205,46 @@ const Combined = () => {
 
       <div className=" flex flex-col items-center pr-5 md:hidden gap-10">
         <div className="flex gap-5">
-          <Image
-            src={"/images/vision1.png"}
-            alt="Vision"
-            height={115}
-            width={70}
-          />
-          <p className="font-[beaufort] text-[#D0B06B] text-5xl">Values</p>
+          <Fade triggerOnce direction="up">
+            <Image
+              src={"/images/vision1.png"}
+              alt="Vision"
+              height={115}
+              width={70}
+            />
+          </Fade>
+          <Fade triggerOnce direction="up">
+            <p className="font-[beaufort] text-[#D0B06B] text-5xl">Values</p>
+          </Fade>
         </div>
         <div className="flex justify-center gap-5">
           <div className="flex flex-col gap-2 border-r-[1px] border-[#D7B56D] pr-5">
             <div className="flex flex-col  items-center gap-4">
-              <p className="text-center max-w-[10ch]">People-First Design </p>
+              <Fade triggerOnce direction="up">
+                <p className="text-center max-w-[10ch]">People-First Design </p>
+              </Fade>
             </div>
             <div className="flex flex-col items-center gap-4">
-              <p className="text-center max-w-[15ch]">
-                Customer - Centric Approach
-              </p>
+              <Fade triggerOnce direction="up">
+                <p className="text-center max-w-[15ch]">
+                  Customer - Centric Approach
+                </p>
+              </Fade>
             </div>
           </div>
 
           <div className="flex flex-col gap-2">
             <div className="flex flex-col items-center gap-4">
-              <p className="text-center max-w-[10ch]">
-                Adhering to Commitments{" "}
-              </p>
+              <Fade triggerOnce direction="up">
+                <p className="text-center max-w-[10ch]">
+                  Adhering to Commitments{" "}
+                </p>
+              </Fade>
             </div>
             <div className="flex flex-col items-center gap-4">
-              <p className="text-center max-w-[10ch]">Delivering Beyond </p>
+              <Fade triggerOnce direction="up">
+                <p className="text-center max-w-[10ch]">Delivering Beyond </p>
+              </Fade>
             </div>
           </div>
         </div>
