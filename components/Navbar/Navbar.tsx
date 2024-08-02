@@ -10,7 +10,8 @@ interface NavbarProps {
 function Navbar({ animationComplete, handleMenuClick, menuClicked }: NavbarProps) {
   return (
     <div
-      className={`navbar z-20 w-full shadow-md fixed top-0 left-0 right-0 bg-white transition-height duration-300 ${
+      id='navbar'
+      className={`z-20 w-full shadow-md fixed top-0 left-0 right-0 bg-white transition-height duration-300 ${
         animationComplete ? "h-[100px]" : "h-[150px]"
       }`}
      >
@@ -59,7 +60,7 @@ function Navbar({ animationComplete, handleMenuClick, menuClicked }: NavbarProps
                 />
               </div>
               <Image
-                className="group"
+                id='group'
                 src="/images/group.png"
                 height={22}
                 width={240}
@@ -114,11 +115,11 @@ function Navbar({ animationComplete, handleMenuClick, menuClicked }: NavbarProps
                 />
               </div>
               <Image
-                className="group"
+                id="group"
                 src="/images/group.png"
                 height={16}
                 width={200}
-                alt="Group"
+                alt=""
               />
             </>
           )}
