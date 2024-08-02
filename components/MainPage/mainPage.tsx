@@ -21,7 +21,7 @@ function ParentComponent(props: Props) {
 
   function handleMenuClick() {
     setMenuClicked(!menuClicked);
-    document.body.style.overflow = !menuClicked ? "hidden" : "auto"; // Disable scrolling when menu is open
+    document.body.style.overflow = !menuClicked ? "hidden" : "auto";
   }
 
   useEffect(() => {
@@ -53,7 +53,7 @@ function ParentComponent(props: Props) {
 
   useEffect(() => {
     gsap.fromTo(
-      ".mainPage",
+      "#mainPage",
       { opacity: 0 },
       { opacity: 1, duration: 0.75, ease: "power4.inOut" }
     );
@@ -62,7 +62,7 @@ function ParentComponent(props: Props) {
   useEffect(() => {
     gsap.to("#logo", {
       scrollTrigger: {
-        trigger: ".mainPage",
+        trigger: "#mainPage",
         start: "top top",
         end: "bottom bottom",
         scrub: 1.5,
@@ -74,9 +74,20 @@ function ParentComponent(props: Props) {
       transformOrigin: "center center",
     });
 
-    gsap.to(".letter, .group, .image", {
+    gsap.to("#logo", {
       scrollTrigger: {
-        trigger: ".navbar",
+        trigger: "#mainPage",
+        start: "top center",
+        end: "bottom center",
+        scrub: true,
+      },
+      scale: 1.5, // yaha pe scroll value change karlo apne hisaab se
+      duration: 2,
+    });
+
+    gsap.to(".letter, #group, #image", {
+      scrollTrigger: {
+        trigger: "#navbar",
         start: "top top",
         end: "center top",
         scrub: true,
@@ -99,16 +110,10 @@ function ParentComponent(props: Props) {
         { opacity: 1, duration: 1.2, ease: "power4.inOut" }
       );
       gsap.fromTo(
-        ".navbar",
+        "#navbar",
         { height: "150px" },
         { height: "100px", duration: 1, ease: "power4.inOut" }
       );
-    }
-  }, [animationComplete]);
-
-  useEffect(() => {
-    if (animationComplete) {
-      window.scrollTo(0, 0);
     }
   }, [animationComplete]);
 
@@ -124,7 +129,7 @@ function ParentComponent(props: Props) {
         ".menu",
         { y: 0 },
         { y: -1000, duration: 1, ease: "power4.inOut" }
-      )
+      );
     }
   }, [menuClicked]);
 
@@ -162,16 +167,20 @@ function MainPage({ animationComplete, width }: MainPageProps) {
   return (
     <>
       {!animationComplete ? (
-        <div className="mainPage flex flex-col items-center shadow-md justify-center max-h-full overflow-hidden pt-[150px] mb-20">
-          <div className="image w-full h-[650px] relative md:block hidden">
+        <div
+          id="mainPage"
+          className="flex flex-col items-center shadow-md justify-center max-h-full overflow-hidden pt-[140px] mb-20"
+          style={{ height: "calc(115vh)" }}
+        >
+          <div id="image" className="w-full h-full relative md:block hidden">
             <Image
               className="relative"
               src="/images/MainImage.png"
-              height={100}
+              height={878}
               width={width}
               alt=""
             />
-            <div className="absolute top-0 left-40 inset-0 flex flex-col justify-center items-center w-fit">
+            <div className="absolute -top-12 left-36 inset-0 flex flex-col justify-center items-center w-fit">
               <Image
                 src="/images/logo_puje.png"
                 height={240}
@@ -184,7 +193,7 @@ function MainPage({ animationComplete, width }: MainPageProps) {
             </div>
             <Image
               id="logo"
-              className="absolute inset-0 top-[80%] left-1/2 transform -translate-x-1/2 cursor-pointer z-0"
+              className="absolute inset-0 top-[80%] left-1/2 z-0"
               src="/images/logoPuje.png"
               height={150}
               width={60}
@@ -194,7 +203,10 @@ function MainPage({ animationComplete, width }: MainPageProps) {
 
           {/* Mobile */}
 
-          <div className="image w-screen h-screen relative md:hidden block">
+          <div
+            id="image"
+            className="w-screen h-screen relative md:hidden block"
+          >
             <Image
               className="relative object-cover"
               src="/images/mobileMainpage.png"
